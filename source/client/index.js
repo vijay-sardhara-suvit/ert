@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { createRoot } from 'react-dom/client';
 import 'bootstrap';
 
@@ -28,83 +28,14 @@ const data = [
   }
 ];
 
-const Component = () => {
-  const [country, setCountry] = useState('');
-
-  const [city, setCity] = useState('');
-
-  const [submit, setSubmit] = useState(false);
-
-  return (
-    <div className='__Component'>
-      <div className='_Component'>
-        <div className='Component'>
-          <select
-            className='form-select'
-            value={country}
-            onChange={(event) => {
-              setCountry(event.target.value);
-
-              setCity('');
-
-              setSubmit(false);
-            }}
-          >
-            {[{ country: 'Select a country...' }, ...data].map(
-              ({ country }, index) => {
-                return (
-                  <option key={index} value={index ? country : ''}>
-                    {country}
-                  </option>
-                );
-              }
-            )}
-          </select>
-
-          {country && (
-            <select
-              className='form-select'
-              value={city}
-              onChange={(event) => {
-                setCity(event.target.value);
-              }}
-            >
-              {[
-                { name: 'Select a city...' },
-                ...data.find(({ country: _country }) => _country === country)
-                  .cities
-              ].map(({ name }, index) => {
-                return (
-                  <option key={index} value={index ? name : ''}>
-                    {name}
-                  </option>
-                );
-              })}
-            </select>
-          )}
-
-          {city && (
-            <button
-              className='btn btn-link btn-sm'
-              onClick={() => setSubmit(true)}
-            >
-              Submit
-            </button>
-          )}
-
-          {submit && city && (
-            <div className='description'>
-              {
-                data
-                  .find(({ country: _country }) => _country === country)
-                  .cities.find(({ name }) => name === city).description
-              }
-            </div>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-createRoot(document.getElementById('viewer')).render(<Component />);
+createRoot(document.getElementById('viewer')).render(
+  <pre>
+    please use the data below,
+    <br />
+    to build a paired-select using only the built-in browser &lt;select&gt;
+    <br />
+    refer https://react.dev/reference/react-dom/components/select
+    <br />
+    {JSON.stringify(data, undefined, 2)}
+  </pre>
+);
