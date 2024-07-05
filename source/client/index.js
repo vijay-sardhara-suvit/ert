@@ -2,6 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import 'bootstrap';
 
+import finalGif from './media/final.gif';
 import './index.scss';
 
 const data = [
@@ -29,13 +30,17 @@ const data = [
 ];
 
 createRoot(document.getElementById('viewer')).render(
-  <pre>
-    please use the data below,
-    <br />
-    to build a paired-select using only the built-in browser &lt;select&gt;
-    <br />
-    refer https://react.dev/reference/react-dom/components/select
-    <br />
-    {JSON.stringify(data, undefined, 2)}
-  </pre>
+  <div>
+    <pre>
+      please use the data below,
+      <br />
+      to build a paired-select using only the built-in browser &lt;select&gt;
+      <br />
+      refer https://react.dev/reference/react-dom/components/select
+      <br />
+      {JSON.stringify(data, undefined, 2)}
+    </pre>
+
+    <img src={finalGif} alt='' />
+  </div>
 );

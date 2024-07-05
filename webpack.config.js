@@ -31,6 +31,10 @@ module.exports = {
         test: /\.scss$/,
         exclude: [path.resolve(process.cwd(), 'node_modules')],
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.gif$/,
+        use: 'file-loader'
       }
     ]
   },
