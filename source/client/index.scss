@@ -1,1 +1,29 @@
 @import '~bootstrap';
+
+.__Component {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ._Component {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .Component {
+      display: flex;
+      align-items: center;
+
+      select {
+        margin-right: 10px;
+      }
+
+      .description {
+        white-space: nowrap;
+      }
+    }
+  }
+}
