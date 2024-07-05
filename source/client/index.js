@@ -7,24 +7,24 @@ import './index.scss';
 
 const data = [
   {
-    country: 'india',
+    country: 'India',
     cities: [
-      { name: 'delhi', description: 'capital of india' },
-      { name: 'mumbai', description: 'financial capital of india' }
+      { name: 'Delhi', description: 'Capital of india' },
+      { name: 'Mumbai', description: 'Financial capital of india' }
     ]
   },
   {
-    country: 'bangladesh',
+    country: 'Bangladesh',
     cities: [
-      { name: 'dhaka', description: 'capital of bangladesh' },
-      { name: 'chittagong', description: 'financial capital of bangladesh' }
+      { name: 'Dhaka', description: 'Capital of bangladesh' },
+      { name: 'Chittagong', description: 'Financial capital of bangladesh' }
     ]
   },
   {
-    country: 'srilanka',
+    country: 'Sri-lanka',
     cities: [
-      { name: 'colombo', description: 'capital of srilanka' },
-      { name: 'jaffna', description: 'financial capital of srilanka' }
+      { name: 'Colombo', description: 'Capital of srilanka' },
+      { name: 'Jaffna', description: 'Financial capital of srilanka' }
     ]
   }
 ];
