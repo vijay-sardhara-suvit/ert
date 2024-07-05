@@ -2,6 +2,8 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import 'bootstrap';
 
+// eslint-disable-next-line
+// @ts-ignore
 import finalGif from './media/final.gif';
 import './index.scss';
 
