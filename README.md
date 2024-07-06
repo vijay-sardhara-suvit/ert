@@ -4,6 +4,7 @@
   refer https://react.dev/reference/react-dom/components/select
   
   conditions:
+  
     - select should have placeholders (Select a country / city)
 
     - city-select should be displayed only when a country is selected
