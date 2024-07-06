@@ -4,7 +4,7 @@ import 'bootstrap';
 
 // eslint-disable-next-line
 // @ts-ignore
-import finalGif from './media/final.gif';
+import finalGif from './final.gif';
 import './index.scss';
 
 const data = [
@@ -32,17 +32,27 @@ const data = [
 ];
 
 createRoot(document.getElementById('viewer')).render(
-  <div>
-    <pre>
-      please use the data below,
-      <br />
-      to build a paired-select using only the built-in browser &lt;select&gt;
-      <br />
+  <div className='m-3'>
+    please use the data at the bottom,
+    <br />
+    to build a paired-select using only the built-in browser &lt;select&gt;
+    <br />
+    <div className='text-muted'>
       refer https://react.dev/reference/react-dom/components/select
-      <br />
-      {JSON.stringify(data, undefined, 2)}
-    </pre>
+    </div>
+    conditions:
+    <ul>
+      <li>select should have placeholders (Select a country / city)</li>
 
-    <img src={finalGif} alt='' />
+      <li>city-select should be displayed only when a country is selected</li>
+
+      <li>submit should be displayed only when a city is selected</li>
+
+      <li>on submit the city description should be displayed</li>
+
+      <li>the components should be centered to the page</li>
+    </ul>
+    <img width='100%' src={finalGif} alt='' />
+    <pre>{JSON.stringify(data, undefined, 2)}</pre>
   </div>
 );
